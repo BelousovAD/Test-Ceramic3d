@@ -14,7 +14,7 @@ namespace Offsets
             {
                 Matrix4x4 offset = spaceMatrix * model[0].inverse;
 
-                if (model.All(modelMatrix => space.Contains(offset * modelMatrix, new ComparerMatrix4X4())))
+                if (model.All(modelMatrix => space.Contains(offset * modelMatrix, new MatrixComparer())))
                 {
                     offsets.Add(offset);
                 }
