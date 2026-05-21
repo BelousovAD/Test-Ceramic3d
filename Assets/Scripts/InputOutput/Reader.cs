@@ -8,7 +8,7 @@ namespace InputOutput
     public static class Reader
     {
         public static IEnumerable<Matrix4x4> ReadMatrices(string filename) =>
-            JsonConvert.DeserializeObject<List<Matrix4x4>>(ReadFile(filename));
+            JsonConvert.DeserializeObject<List<Matrix4x4>>(ReadFile(filename), new MatrixConverter());
 
         private static string ReadFile(string name)
         {
