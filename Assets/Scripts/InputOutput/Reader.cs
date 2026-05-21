@@ -12,7 +12,7 @@ namespace InputOutput
 
         private static string ReadFile(string name)
         {
-            string path = Path.Combine(Application.persistentDataPath, name);
+            string path = Path.Combine(Application.streamingAssetsPath, name);
 
             try
             {

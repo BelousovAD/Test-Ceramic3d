@@ -9,7 +9,7 @@ namespace InputOutput
     {
         public static void WriteMatrices(string filename, IEnumerable<Matrix4x4> matrices)
         {
-            string path = Path.Combine(Application.persistentDataPath, filename);
+            string path = Path.Combine(Application.streamingAssetsPath, filename);
             string json = JsonConvert.SerializeObject(matrices);
             File.WriteAllText(path, json);
         }
