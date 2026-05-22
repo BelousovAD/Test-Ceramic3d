@@ -21,8 +21,8 @@ namespace Infrastructure
 
         private void Apply()
         {
-            transform.SetLocalPositionAndRotation(_offsets.Current.GetPosition(), _offsets.Current.rotation);
-            transform.localScale = _offsets.Current.lossyScale;
+            _target.SetLocalPositionAndRotation(_offsets.Current.GetPosition(), _offsets.Current.rotation);
+            _target.localScale = _offsets.Current.lossyScale;
         }
     }
 }
