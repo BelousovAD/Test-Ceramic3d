@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Offsets
 {
-    internal static class OffsetFinder
+    public static class OffsetFinder
     {
         public static IEnumerable<Matrix4x4> Find(IReadOnlyList<Matrix4x4> model, IReadOnlyList<Matrix4x4> space)
         {

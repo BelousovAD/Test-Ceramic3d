@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace View
 {
-    internal class SelectionView : MonoBehaviour
+    public class SelectionView : MonoBehaviour
     {
         [SerializeField] private string _format = "{0}/{1}";
         [SerializeField] private TMP_Text _textField;

@@ -1,22 +1,21 @@
+using Matrices;
 using UnityEngine;
 
-namespace Matrices
+namespace Infrastructure
 {
     internal class Spawner : MonoBehaviour
     {
         [SerializeField] private Transform _parent;
         [SerializeField] private Transform _prefab;
-        [SerializeField] private MatrixContainer _container;
+        
+        private MatrixCollection _collection;
 
-        private void OnEnable() =>
-            _container.Initialized += Spawn;
+        public void Initialize(MatrixCollection collection) =>
+            _collection = collection;
 
-        private void OnDisable() =>
-            _container.Initialized -= Spawn;
-
-        private void Spawn()
+        public void Spawn()
         {
-            foreach (Matrix4x4 matrix in _container.Matrices)
+            foreach (Matrix4x4 matrix in _collection.Matrices)
             {
                 Transform instance = Instantiate(_prefab, _parent);
                 instance.SetLocalPositionAndRotation(matrix.GetPosition(), matrix.rotation);
