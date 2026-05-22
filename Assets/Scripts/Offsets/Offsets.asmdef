@@ -2,10 +2,7 @@
     "name": "Offsets",
     "rootNamespace": "",
     "references": [
-        "GUID:dcca1fd92a5a33444bb1d6b22ef5bf19",
-        "GUID:6299409f93576114a92de96bba32bf63",
-        "GUID:a0e2f89677f79e4409ca2812b5455d6c",
-        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+        "GUID:a0e2f89677f79e4409ca2812b5455d6c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
