@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Matrices
 {
-    internal class MatrixCollection
+    public class MatrixCollection
     {
         private readonly List<Matrix4x4> _matrices;
 

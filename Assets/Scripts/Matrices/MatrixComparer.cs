@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Matrices
 {
-    internal class MatrixComparer : IEqualityComparer<Matrix4x4>
+    public class MatrixComparer : IEqualityComparer<Matrix4x4>
     {
         public bool Equals(Matrix4x4 first, Matrix4x4 second) =>
             first == second;
