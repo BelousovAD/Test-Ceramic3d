@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Offsets
+namespace Matrices
 {
     internal class MatrixComparer : IEqualityComparer<Matrix4x4>
     {
