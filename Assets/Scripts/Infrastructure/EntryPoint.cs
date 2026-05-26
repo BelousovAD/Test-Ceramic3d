@@ -10,6 +10,8 @@ namespace Infrastructure
 {
     public class EntryPoint : MonoBehaviour
     {
+        [SerializeField][Min(0f)] private float _epsilon = 0.0001f;
+        
         [SerializeField] private string _modelSourceFileName;
         [SerializeField] private string _spaceSourceFileName;
         [SerializeField] private string _outputFileName;
@@ -39,7 +41,8 @@ namespace Infrastructure
             _modelSpawner.Spawn();
             _spaceSpawner.Spawn();
 
-            List<Matrix4x4> offsets = OffsetFinder.Find(_modelCollection.Matrices, _spaceCollection.Matrices).ToList();
+            List<Matrix4x4> offsets =
+                OffsetFinder.Find(_modelCollection.Matrices, _spaceCollection.Matrices, _epsilon).ToList();
             Writer.WriteMatrices(_outputFileName, offsets);
             _offsetCollection.Initialize(offsets);
         }
