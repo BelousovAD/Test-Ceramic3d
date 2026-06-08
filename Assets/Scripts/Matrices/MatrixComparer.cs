@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Matrices
 {
-    public class MatrixComparer : IEqualityComparer<Matrix4x4>
+    public readonly struct MatrixComparer : IEqualityComparer<Matrix4x4>
     {
         private const int Rank = 4;
         
